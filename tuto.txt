@@ -1,0 +1,10 @@
+creation de projet scrapy
+scrapy startproject tutorial
+creation de spider:
+scrapy genspider nom_de_spider quotes.toscrape.com 
+
+
+scrapy genspider -l
+liste de gens de spider
+scrapy genspider -t crawl my crawler
+utilisation classe crawler
