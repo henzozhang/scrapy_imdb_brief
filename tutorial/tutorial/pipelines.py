@@ -15,12 +15,12 @@ class TutorialPipeline:
             'localhost',
             27017
         )
-        db = self.conn['imdb_brief']
+        db = self.conn['detail_film']
         self.collection =db['imbd_tb']
 
     def close_spider(self, spider):
-        self.client.close()
-        
+        self.conn.close()
+
     def process_item(self, item, spider):
         self.collection.insert(dict(item))
         return item
